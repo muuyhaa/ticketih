@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AuthPage from './pages/auth';
 import SuperAdminDashboard from './pages/SAdminDashboard';
 import AdminDashboard from './pages/AdminDashboard';
-import UserDashboard from './pages/userdashboard';
+import UserDashboard from './pages/UserDashboard';
 import AgentDashboard from './pages/agent';
 
 function App() {
