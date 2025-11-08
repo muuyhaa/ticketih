@@ -20,7 +20,7 @@ jobs:
     strategy:
       matrix:
         # We test on Node 18 (older LTS), 20 (current LTS), and 22 (latest stable)
-        node-version: [18.x, 20.x, 22.x]
+        node-version: [20.x, 22.x]
       # Fail the overall run immediately if any single version fails
       fail-fast: true 
 
@@ -54,3 +54,4 @@ jobs:
       # ----------------------------------------------------
       # Optional: You can add more steps here, like linting or deployment triggers.
       # ----------------------------------------------------
+
