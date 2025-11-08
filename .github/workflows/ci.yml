@@ -27,26 +27,26 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: ⬇️ Checkout Repository Code
+      - name: Checkout Repository Code
         uses: actions/checkout@v4
       
-      - name: 🛠️ Setup Node.js ${{ matrix.node-version }}
+      - name: Setup Node.js ${{ matrix.node-version }}
         # Installs the correct Node version for the current matrix iteration
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm' # Speeds up subsequent runs
           
-      - name: 📥 Install Dependencies
+      - name: Install Dependencies
         # 'npm ci' is used for clean, reliable installs in CI environments
         run: npm ci
         
-      - name: ⚙️ 1. Run Build Check
+      - name: 1. Run Build Check
         # This step verifies the code compiles (important for Vite/React)
         # It catches syntax errors, casing issues, and dependency problems.
         run: npm run build --if-present
         
-      - name: 🧪 2. Run All Tests
+      - name: 2. Run All Tests
         # This executes the "test": "npx vitest" script defined in your package.json
         # This is the quality gate for your application logic.
         run: npm test
@@ -54,4 +54,5 @@ jobs:
       # ----------------------------------------------------
       # Optional: You can add more steps here, like linting or deployment triggers.
       # ----------------------------------------------------
+
 
