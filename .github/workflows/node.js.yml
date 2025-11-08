@@ -33,6 +33,6 @@ jobs:
         # Runs the build script defined in your package.json
         run: npm run build --if-present
         
-      - name: 🧪 Run Tests
+      - name: Run Tests 
         # Executes your test suite
         run: npm test
