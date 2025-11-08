@@ -14,7 +14,7 @@ describe('App Component Smoke Test', () => {
     // 2. Check for the presence of a known element or attribute.
     // Since App.jsx is usually the entry point, we check for a main element or a piece of known text.
     // Replace 'ticketih' with some text you know is visible on your main page.
-    const expectedElement = screen.getByText(/ticketih/i); 
+    const expectedElement = screen.getByText(/UCA-Support/i); 
     
     // 3. Assertion: checks if the element is in the document (simulated browser)
     expect(expectedElement).toBeInTheDocument(); 
