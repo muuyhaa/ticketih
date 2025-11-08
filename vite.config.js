@@ -16,6 +16,6 @@ export default defineConfig({
     
     // 3. Setup file to extend 'expect' with testing-library matchers
     setupFiles: './src/test/setup.js', 
-    include: ['src/ ** / *. {test, spec}. {ts, tsx}' ]
+    include: ['src/**/*.{test,spec}. {ts,tsx}']
   }
 });
