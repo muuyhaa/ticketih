@@ -1,4 +1,3 @@
-
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
@@ -6,7 +5,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   
-  // 🔑 Add the test property for Vitest configuration
+  // 🔑 Vitest configuration
   test: {
     // 1. Use 'jsdom' to simulate the browser DOM environment
     environment: 'jsdom',
@@ -16,7 +15,12 @@ export default defineConfig({
     
     // 3. Setup file to extend 'expect' with testing-library matchers
     setupFiles: './src/test/setup.js', 
-    dir :'./src'
-
+    
+    // 4. ✅ FIXED: Include pattern to match your actual test files
+    include: [
+      'src/test/**/*.test.{js,jsx,ts,tsx}',
+      'src/**/*.test.{js,jsx,ts,tsx}',
+      '**/*.spec.{js,jsx,ts,tsx}'
+    ]
   }
 });
