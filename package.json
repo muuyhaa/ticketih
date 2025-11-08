@@ -8,7 +8,9 @@
     "build": "vite build",
     "test": "npx vitest",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run"
   },
   "dependencies": {
     "lucide-react": "^0.545.0",
